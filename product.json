@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "barcode": "47374",
+    "product_name": "mango",
+    "brands": "delmonte",
+    "ingredient_text": "mango",
+    "category": "beverage"
+  },
+  {
+    "id": 2,
+    "barcode": "3175680011442",
+    "product_name": "Biscuit soja orange",
+    "brands": "Gerbl\u00e9",
+    "ingredient_text": "Farine de bl\u00e9 57,7%, sucre non raffin\u00e9, huile de colza, flocons de soja toast\u00e9s 7%, germe de bl\u00e9 5,3%, amidon de bl\u00e9, oranges d\u00e9shydrat\u00e9es 1,5%, fibre de bl\u00e9, magn\u00e9sium, sucre, amidon de ma\u00efs, jus concentr\u00e9 de citron, poudre \u00e0 lever: carbonates de sodium, \u00e9mulsifiant: l\u00e9cithines, sel de mer, ar\u00f4me naturel d'orange, vitamines (E, PP, B6, B1, B9).",
+    "category": "Biscuit sec croquant all\u00e9g\u00e9 en mati\u00e8re grasse, Biscuit sec pour petit d\u00e9jeuner, Biscuit sec aux fruits"
+  }
+]

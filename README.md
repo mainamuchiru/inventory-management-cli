@@ -66,6 +66,31 @@ Start the interactive command-line application:
 ```bash
 python3 cli/cli.py
 ```
+## Project Structure
+
+inventory-management-cli/
+├── app/
+│   ├── crud/
+│   │   ├── __init__.py
+│   │   └── crud.py
+│   ├── models/
+│   │   └── product.py
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   └── routes.py
+│   ├── services/
+│   │   ├── __init__.py
+│   │   └── external_api.py
+│   └── __init__.py
+├── cli/
+│   └── cli.py
+├── tests/
+│   └── test_crud.py
+├── utils/
+├── product.json
+├── requirements.txt
+├── .gitignore
+└── README.md
 
 
 ## API Endpoints

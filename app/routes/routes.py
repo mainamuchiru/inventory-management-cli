@@ -1,6 +1,12 @@
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from flask import Flask, request, jsonify
-from services.external_api import get_product_barcode, search_product_by_name
-from crud.crud import (
+from app.services.external_api import get_product_barcode,search_product_by_name
+
+from app.crud.crud import (
     get_all_products,
     get_product_by_id,
     add_product,
@@ -63,7 +69,7 @@ def search_product(barcode):
 
 
 @app.route("/inventory/import/<barcode>", methods=["POST"])
-def import_inventory_product(barcode):
+def add_product_inventory(barcode):
     product = import_product(barcode)
     if product is None:
         return jsonify({"error": "Product not found"}), 404

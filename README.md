@@ -67,7 +67,7 @@ Start the interactive command-line application:
 python3 cli/cli.py
 ```
 ## Project Structure
-
+```
 inventory-management-cli/
 ├── app/
 │   ├── crud/
@@ -91,7 +91,7 @@ inventory-management-cli/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
+```
 
 ## API Endpoints
 

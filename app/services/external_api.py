@@ -33,9 +33,6 @@ def get_product_barcode(barcode):
 
     return result
         
-    
-print(get_product_barcode(6161107151720))
-
 
 def search_product_by_name(name, limit=5):
     params = {
@@ -66,6 +63,6 @@ def search_product_by_name(name, limit=5):
     return results
 
 
-print(search_product_by_name("Strawberry"))
+
         
 

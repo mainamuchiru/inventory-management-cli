@@ -1,7 +1,15 @@
 import os
 import json
-from services.external_api import get_product_barcode, search_product_by_name
-DATA_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "product.json")
+from app.services.external_api import (
+    get_product_barcode,
+    search_product_by_name,
+)
+from app.models.product import Product
+
+DATA_FILE = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
+    "product.json"
+)
 
 
 def _load_products():
@@ -31,13 +39,23 @@ def get_product_by_id(product_id):
     return None
 
 
-def add_product(product):
+def add_product(product_data):
     products = _load_products()
     new_id = max((p.get("id", 0) for p in products), default=0) + 1
-    product["id"] = new_id
-    products.append(product)
+
+    product = Product(
+        barcode=product_data.get("barcode"),
+        product_name=product_data.get("product_name"),
+        brands=product_data.get("brands"),
+        ingredient_text=product_data.get("ingredient_text"),
+        category=product_data.get("category"),
+        id=new_id
+    )
+
+    product_dict = product.to_dict()
+    products.append(product_dict)
     _save_products(products)
-    return product
+    return product_dict
 
 
 def update_product(product_id, updated_data):

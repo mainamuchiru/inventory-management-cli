@@ -30,5 +30,53 @@
     "brands": "Pringles",
     "ingredient_text": "Pommes de terre d\u00e9shydrat\u00e9es, huiles v\u00e9g\u00e9tales (tournesol, ma\u00efs), farine de riz, amidon de BL\u00c9, farine de ma\u00efs, assaisonnement cr\u00e8me acidul\u00e9e et oignon (amidon de BL\u00c9, exhausteurs de go\u00fbt {glutamate monosodique, guanylate disodique, inosinate disodique}, oignon en poudre, maltodextrine, sel, dextrose, sucre, lactos\u00e9rum doux en poudre {LAIT}, f\u00e9cule de pomme de terre, amidon de ma\u00efs modifi\u00e9, acidifiants {acide citrique, acide lactique, acide malique}, cr\u00e8me acidul\u00e9e en poudre {LAIT}, ar\u00f4mes {LAIT}, extrait de levure, sirop de glucose, prot\u00e9ines de LAIT, farine de riz), \u00e9mulsifiant (E471), maltodextrine, sel, colorant (rocou).",
     "category": "Tuiles de pommes de terre extrud\u00e9es sal\u00e9es"
+  },
+  {
+    "id": 5,
+    "barcode": "5411188124689",
+    "product_name": "Oat No Sugars",
+    "brands": "alpro",
+    "ingredient_text": "Haverbasis (97,0%) (water, _haver_ (8,3%)), oplosbare ma\u00efsvezel, zonnebloemolie, calcium (calciumcarbonaat), zeezout, stabilisator (gellangom), vitaminen B2, B12, D2.",
+    "category": "Suikervrije dranken, Haverdranken, en:Plant-based milk substitutes"
+  },
+  {
+    "id": 6,
+    "barcode": "5411188124689",
+    "product_name": "Oat No Sugars",
+    "brands": "alpro",
+    "ingredient_text": "Haverbasis (97,0%) (water, _haver_ (8,3%)), oplosbare ma\u00efsvezel, zonnebloemolie, calcium (calciumcarbonaat), zeezout, stabilisator (gellangom), vitaminen B2, B12, D2.",
+    "category": "Suikervrije dranken, Haverdranken, en:Plant-based milk substitutes"
+  },
+  {
+    "id": 7,
+    "barcode": "5053990155354",
+    "product_name": "Sour Cream & Onion",
+    "brands": "Pringles",
+    "ingredient_text": "Pommes de terre d\u00e9shydrat\u00e9es, huiles v\u00e9g\u00e9tales (tournesol, ma\u00efs), farine de riz, amidon de BL\u00c9, farine de ma\u00efs, assaisonnement cr\u00e8me acidul\u00e9e et oignon (amidon de BL\u00c9, exhausteurs de go\u00fbt {glutamate monosodique, guanylate disodique, inosinate disodique}, oignon en poudre, maltodextrine, sel, dextrose, sucre, lactos\u00e9rum doux en poudre {LAIT}, f\u00e9cule de pomme de terre, amidon de ma\u00efs modifi\u00e9, acidifiants {acide citrique, acide lactique, acide malique}, cr\u00e8me acidul\u00e9e en poudre {LAIT}, ar\u00f4mes {LAIT}, extrait de levure, sirop de glucose, prot\u00e9ines de LAIT, farine de riz), \u00e9mulsifiant (E471), maltodextrine, sel, colorant (rocou).",
+    "category": "Tuiles de pommes de terre extrud\u00e9es sal\u00e9es"
+  },
+  {
+    "id": 8,
+    "barcode": "7622210620248",
+    "product_name": "Trident watermelon flavour",
+    "brands": "Trident",
+    "ingredient_text": "open trident f85140trdntmel watermelon flavoured \u0628\u0646\u0643\u0647\u0629 \u0627\u0644\u0628\u0637\u064a\u062e 60 pieces \u0642\u0637\u0639\u0629",
+    "category": "Sugar-free chewing gum"
+  },
+  {
+    "id": 9,
+    "barcode": "5411188124689",
+    "product_name": "Oat No Sugars",
+    "brands": "alpro",
+    "ingredient_text": "Haverbasis (97,0%) (water, _haver_ (8,3%)), oplosbare ma\u00efsvezel, zonnebloemolie, calcium (calciumcarbonaat), zeezout, stabilisator (gellangom), vitaminen B2, B12, D2.",
+    "category": "Suikervrije dranken, Haverdranken, en:Plant-based milk substitutes"
+  },
+  {
+    "id": 10,
+    "barcode": "3175460000017",
+    "product_name": "GARLIC & HERBS",
+    "brands": "BOURSIN",
+    "ingredient_text": "pasteurized milk and cream, lactic ferments, garlic and herbs 1,8%, salt, pepper, may contain traces of nuts, preservative (potassium sorbate)",
+    "category": "Cheese spreads, Cottage cheeses, Industrial cheese, Kaas, Roomkaas, Smeerkaas"
   }
 ]

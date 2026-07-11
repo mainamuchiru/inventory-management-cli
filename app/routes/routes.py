@@ -4,7 +4,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from flask import Flask, request, jsonify
-from app.services.external_api import get_product_barcode,search_product_by_name
+from app.services.external_api import get_product_barcode, search_product_by_name
 
 from app.crud.crud import (
     get_all_products,
@@ -12,7 +12,9 @@ from app.crud.crud import (
     add_product,
     update_product,
     delete_product,
-    import_product
+    import_product,
+    search_products_by_name,
+    import_product_by_name
 )
 
 app = Flask(__name__)
@@ -68,11 +70,43 @@ def search_product(barcode):
     return jsonify(product), 200
 
 
+@app.route("/search/name", methods=["GET"])
+def search_by_name_online():
+    """Search OpenFoodFacts (external) by name."""
+    name = request.args.get("q", "")
+    if not name:
+        return jsonify({"error": "Missing query param 'q'"}), 400
+    results = search_product_by_name(name)
+    if not results:
+        return jsonify({"error": "No products found"}), 404
+    return jsonify(results), 200
+
+
 @app.route("/inventory/import/<barcode>", methods=["POST"])
 def add_product_inventory(barcode):
     product = import_product(barcode)
     if product is None:
         return jsonify({"error": "Product not found"}), 404
+    return jsonify(product), 201
+
+
+@app.route("/inventory/search", methods=["GET"])
+def search_inventory():
+    """Search your local inventory (product.json) by name."""
+    name = request.args.get("name", "")
+    results = search_products_by_name(name)
+    return jsonify(results), 200
+
+
+@app.route("/inventory/import/name", methods=["POST"])
+def add_product_by_name():
+    """Search OpenFoodFacts by name and import the first match into inventory."""
+    name = request.args.get("q", "")
+    if not name:
+        return jsonify({"error": "Missing query param 'q'"}), 400
+    product = import_product_by_name(name)
+    if product is None:
+        return jsonify({"error": "No products found"}), 404
     return jsonify(product), 201
 
 

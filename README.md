@@ -108,9 +108,13 @@ inventory-management-cli/
 
 ## Running Tests
 
-Run all tests with:
+Run all tests with either:
 
 ```bash
+pytest
+
+or
+
 python3 -m pytest tests -v
 ```
 

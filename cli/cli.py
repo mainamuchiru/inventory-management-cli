@@ -10,9 +10,10 @@ def show_menu():
     print("3. Add product")
     print("4. Update product")
     print("5. Delete product")
-    print("6. Search product by barcode (online)")
-    print("7. Import product by barcode")
-    print("8. Exit")
+    print("6. Search product (online)")
+    print("7. Import product")
+    print("8. Search local inventory by name")
+    print("9. Exit")
 
 
 def view_all_products():
@@ -52,15 +53,69 @@ def remove_product():
     print(response.json())
 
 
-def search_barcode():
+def _print_response(response):
+    print("Status:", response.status_code)
+    try:
+        print(response.json())
+    except requests.exceptions.JSONDecodeError:
+        print("Server did not return valid JSON:", response.text)
+
+
+def search_by_barcode():
     barcode = input("Enter barcode: ")
     response = requests.get(f"{BASE_URL}/search/{barcode}")
-    print(response.json())
+    _print_response(response)
 
 
-def import_barcode():
+def search_by_name():
+    name = input("Enter product name to search: ")
+    response = requests.get(f"{BASE_URL}/search/name", params={"q": name})
+    _print_response(response)
+
+
+def search_product():
+    print("\nSearch by:")
+    print("1. Name")
+    print("2. Barcode")
+    sub_choice = input("Enter choice: ")
+
+    if sub_choice == "1":
+        search_by_name()
+    elif sub_choice == "2":
+        search_by_barcode()
+    else:
+        print("Invalid choice, try again.")
+
+
+def import_by_barcode():
     barcode = input("Enter barcode to import: ")
     response = requests.post(f"{BASE_URL}/inventory/import/{barcode}")
+    _print_response(response)
+
+
+def import_by_name():
+    name = input("Enter product name to import: ")
+    response = requests.post(f"{BASE_URL}/inventory/import/name", params={"q": name})
+    _print_response(response)
+
+
+def import_product():
+    print("\nImport by:")
+    print("1. Name")
+    print("2. Barcode")
+    sub_choice = input("Enter choice: ")
+
+    if sub_choice == "1":
+        import_by_name()
+    elif sub_choice == "2":
+        import_by_barcode()
+    else:
+        print("Invalid choice, try again.")
+
+
+def search_local_inventory():
+    name = input("Enter product name to search in local inventory: ")
+    response = requests.get(f"{BASE_URL}/inventory/search", params={"name": name})
     print(response.json())
 
 
@@ -81,10 +136,12 @@ def main():
             elif choice == "5":
                 remove_product()
             elif choice == "6":
-                search_barcode()
+                search_product()
             elif choice == "7":
-                import_barcode()
+                import_product()
             elif choice == "8":
+                search_local_inventory()
+            elif choice == "9":
                 print("Goodbye!")
                 break
             else:
